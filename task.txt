@@ -1,0 +1,14 @@
+per_cent = {'ТКБ': 5.6, 'СКБ': 5.9, 'ВТБ': 4.28, 'СБЕР': 4.0}
+money = int(input("Какую сумму планируете положить под проценты?"))
+deposit1=per_cent.get('ТКБ')
+TKB=money*deposit1/100
+deposit2=per_cent.get('СКБ')
+CKB=money*deposit2/100
+deposit3=per_cent.get('ВТБ')
+BTB=money*deposit3/100
+deposit4=per_cent.get('СБЕР')
+CBER=money*deposit4/100
+deposit=[TKB, CKB, BTB, CBER]
+print(list(map(int, deposit)))
+max_deposit=max(deposit)
+print(max_deposit)
